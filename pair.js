@@ -86,7 +86,7 @@ contextInfo: {
 externalAdReply: {
 title: 'ELITEPROTECH SESSION-ID GENERATOR',
 body: 'Join our official channel for more updates',
-thumbnailUrl: 'https://files.catbox.moe/1jquts.jpg',
+thumbnailUrl: 'http://elitepro-url-clouds.onrender.com/18c0e09bc35e16fae8fe7a34647a5c82.jpg',
 sourceUrl: 'https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g', // or your global.link
       mediaType: 1,
       renderLargerThumbnail: true
