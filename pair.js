@@ -7,7 +7,7 @@ const {
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore
-} = require("@whiskeysockets/baileys");
+} = require("baileys");
 
 function removeFile(FilePath) {
     if (!fs.existsSync(FilePath)) return false;
@@ -65,7 +65,7 @@ router.get('/', async (req, res) => {
                     });
 
                     await sock.sendMessage(sock.user.id, {
-    text: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
+                        text: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
 📁 Upload the creds.json file to your session folder.
 
 📢 *Stay Updated — Follow Our Channels:*
@@ -83,19 +83,7 @@ https://youtube.com/@eliteprotechs
 
 🌐 *Explore more tools on our website:*  
 https://eliteprotech.vercel.app`,
-    
-    contextInfo: {
-        externalAdReply: {
-            title: "Successfully Generated Session",
-            body: "EliteProTech Session-id Generator",
-            thumbnailUrl: "https://files.catbox.moe/1jquts.jpg",
-            sourceUrl: "https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g",
-            mediaType: 1,
-            renderLargerThumbnail: true,
-            showAdAttribution: true
-        }
-    }
-}, { quoted: sockses });
+                    }, { quoted: sockses });
 
                     await delay(100);
                     return await removeFile('./session');
