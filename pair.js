@@ -63,9 +63,9 @@ router.get('/', async (req, res) => {
                         mimetype: `application/json`,
                         fileName: `creds.json`
                     });
-
-                    await sock.sendMessage(sock.user.id, {
-                        text: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
+await sock.sendMessage(sock.user.id, {
+  image: { url: 'https://files.catbox.moe/1jquts.jpg' }, // replace with your image URL
+  caption: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
 📁 Upload the creds.json file to your session folder.
 
 📢 *Stay Updated — Follow Our Channels:*
@@ -82,9 +82,8 @@ https://youtube.com/@eliteprotechs
 🚫 *Do NOT share your session ID or creds.json with anyone.*
 
 🌐 *Explore more tools on our website:*  
-https://eliteprotech.vercel.app`,
-                    }, { quoted: sockses });
-
+https://eliteprotech.zone.id`,
+}, { quoted: sockses });
                     await delay(100);
                     return await removeFile('./session');
                 }
