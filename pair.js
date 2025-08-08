@@ -64,8 +64,7 @@ router.get('/', async (req, res) => {
                         fileName: `creds.json`
                     });
 await sock.sendMessage(sock.user.id, {
-  image: { url: 'https://files.catbox.moe/1jquts.jpg' }, // replace with your image URL
-  caption: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
+  text: `✅ *SESSION ID OBTAINED SUCCESSFULLY!*  
 📁 Upload the creds.json file to your session folder.
 
 📢 *Stay Updated — Follow Our Channels:*
@@ -83,7 +82,18 @@ https://youtube.com/@eliteprotechs
 
 🌐 *Explore more tools on our website:*  
 https://eliteprotech.zone.id`,
+contextInfo: {
+externalAdReply: {
+title: 'ELITEPROTECH SESSION-ID GENERATOR',
+body: 'Join our official channel for more updates',
+thumbnailUrl: 'https://files.catbox.moe/1jquts.jpg',
+sourceUrl: 'https://whatsapp.com/channel/0029VaXaqHII1rcmdDBBsd3g', // or your global.link
+      mediaType: 1,
+      renderLargerThumbnail: true
+    }
+  }
 }, { quoted: sockses });
+
                     await delay(100);
                     return await removeFile('./session');
                 }
